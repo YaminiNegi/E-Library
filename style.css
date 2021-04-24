@@ -1,0 +1,367 @@
+
+	header 
+	{
+		background-color: #F2E9E4 ;
+		align-items: center;
+		display: flex;
+		
+	}
+	section
+	{
+		height: 100% ;
+		width: 100 %;
+		margin: 0 ;
+		padding: 0 ;
+		font-family: 'Roboto Condensed';
+
+	}
+	footer
+	{
+	   height: 80px ;
+		width: 100% ;
+		background-color: #F2E9E4 ;
+		padding-bottom: 0px ;	
+	}
+	.logo
+	{
+	  text-align: center ;
+	  font-size: 28px ;
+	  display: flex ;
+	  color: grey ;
+	  text-decoration: none ;
+	  letter-spacing: 20px ;
+	  align-items: center ;
+	  font-family:Roboto Condensed ;
+
+	 }
+	/*li a
+	{
+		color: grey;
+		text-decoration: none;
+		position:absolute; left:50px; top: 100px; 
+
+	}*/
+	nav{
+		float: left;
+		word-spacing: 30px; 
+		padding: 10px;
+
+
+	}
+	/*nav li{
+		display: inline-block;
+		line-height: 10px;
+	*/
+	}
+	/*button {
+		color: black;
+		font-size: 16px;
+		font-family: 'Roboto Condensed';
+		padding: 15px 32px;
+		padding-right: 20px;
+		margin-right: auto;
+		text-align: center;
+		word-spacing: normal;
+		text-decoration: none;
+		border-radius: 8px;
+		padding: 20px;
+
+		 
+						
+
+	}*/
+
+
+	/*.container{
+		position: relative; top: -70px;
+		width: 1200px;
+		height: 400px;
+		margin: 240px auto;
+		
+	}*/
+	.container .box{
+		position: relative;
+		width: calc(400px - 30px);
+		height: calc(400px - 30px);
+		background: #F2E9E4;
+		float: left;
+		margin: 15px;
+		box-sizing: border-box;
+		overflow: hidden;
+		border-radius: 10px;
+	}
+	.container .box .content{
+		position: absolute;
+		height: calc(100% - 200px);
+		width: 100%;
+		text-align: center;
+		padding-right: 20px;
+		box-sizing: border-box;
+
+	}	
+	.center {
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+	  margin-top: auto;
+	  width: calc(100% - 75%);
+	  padding: 20px;
+	}
+	.search{
+		display: flex ;
+		justify-content: center ;
+		align-items: center;
+		margin-top: 30px;
+	}
+	.sort{
+		display: flex;
+		float: right;
+		align-items: center;
+		padding-top: 20px;
+		margin: auto;
+		margin-right: 14%;
+	}
+	input{
+		border: 3px solid #F2E9E4;
+		height: 40px;
+		width: 300px;
+		border-radius: 50px;
+		padding: 0px 10px;
+	}
+	/*.btn{
+		position: absolute;
+	    top: 3px;
+	    float: right;
+	    right: -43px;
+		float: right;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		background: #F2E9E4;
+		display: flex;
+		align-items: center;
+	    justify-content: center;
+	}*/
+
+	.pagination{
+		display: flex ;
+	    align-items: center;
+		width: 200px;
+		flex-direction: row;
+		margin-right: auto;
+		margin-left: auto;
+		margin-bottom: 20px;
+		font-family: 'Roboto Condensed';
+
+	 }
+	.pagination a{
+		padding: 8px 16px;
+		text-decoration: none;
+		border: 1px solid #ddd;
+		background-color: #F2E9E4;
+		color: black;
+	}
+	.pagination a:active{
+	  background-color: #4CAF50 !important;
+	    color: white;
+	}
+
+	.pagination a:hover:not(.active) {
+		background-color: #ddd;
+	}
+
+	.pagination a:first-child {
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+	}
+	.pagination a:last-child {
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+	}
+	.button-container{
+	   text-decoration: none;
+	   padding: 6px 12px;
+	   background: #0766C5;
+	   font-family: 'Roboto Condensed';
+	   border-radius: 6px;
+	   letter-spacing: 2px;
+	  
+	}
+	.button-container a{
+		text-decoration: none;
+		color: white;
+	}
+	.col{
+		display: flex;
+	}
+	.container-center{
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		font-size: 20px;
+		font-family: 'Roboto Condensed';
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		padding-left: 80px;
+		padding-right: 80px;
+		padding-top: 20px;
+
+
+	}
+	/*.container{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		padding-left: 40px;
+		padding-right: 40px;
+		padding-top: 80px;
+		padding-bottom: 50px;
+
+	}*/
+	.row{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.container-center div{
+		font-size: 26px;
+		letter-spacing: 8px;
+		font-weight: bold;
+	}
+	/*.btn-del{
+		text-decoration: none;
+	   padding: 9px 25px;
+	   color: white;
+	   background: red;
+	   font-family: 'Roboto Condensed';
+	   border-radius: 3px;
+	   margin: auto;
+	   margin-top: 10px;
+	   font-size: 14px;
+	   width: 75px;
+	   height: 40px;
+
+
+	}
+	.btn-upd{
+	   text-decoration: none;
+	   padding: 9px 25px;
+	   color: white;
+	   background: #0766C5;
+	   font-family: 'Roboto Condensed';
+	   border-radius: 3px;
+	   margin: auto;
+	   margin-top: 10px;
+	   font-size: 14px;
+	   width: 75px;
+	   height: 40px;
+
+
+	}*/
+	.container-center h4{
+		font-size: 16px;
+	}
+	.container-center form{
+		width: 100px;
+	}
+	
+
+	.single-book-container{
+		background: #F2E9E4;
+		padding: 20px;
+		border-radius: 10px;
+		font-family: 'Roboto Condensed';
+
+
+	}
+	
+	.form-container h1 {
+	font-size: 20px;
+	font-family:Roboto Condensed;
+}
+
+.form-container{
+}
+
+.popup{
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+}
+.popup .popuptext{
+	visibility: hidden;
+	width: 160px;
+	background-color: #555;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 8px 0;
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	left: 50%;
+	margin-left: -80px;
+}
+.popup .show{
+	visibility: visible;
+	-webkit-animation: fadeIn 1s;
+	animation: fadeIn 1s
+}
+@-webkit-keyframes fadeIn{
+	from{opacity: 0;}
+	to {opacity: 1;}
+}
+@keyframes fadeIn{
+	from{opacity: 0;}
+	to {opacity: 1;}
+}
+.popip .popuptext::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #555 transparent transparent transparent; 
+
+}
+
+.form-container input{
+	width: 100%;
+	height: 40px;
+	width: 300px;
+	border: 3px solid #F2E9E4;
+	height: 40px;
+	border-radius: 50px;
+	padding: 0px 10px;
+
+
+}
+.add-book {
+	font-family:Roboto Condensed;
+	font-size: 20px;
+}
+.add-book label{
+	padding-left: 10px;
+
+}
+.add-book input{
+	font-size: 18px;
+}
+::placeholder{
+font-size: 16px; 
+	}
+
+.form-select{
+	width: 78px!important;
+}
+.container{
+	font-family:Roboto Condensed;
+	font-size: 20px;
+
+}
