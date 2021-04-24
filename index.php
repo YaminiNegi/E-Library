@@ -21,7 +21,7 @@
 			<img class="img-fluid "src="https://www.boxfordlibrary.org/wordpress/wp-content/uploads/2014/03/elibrary-logo.png">
 		</a>
 		<div class="button-container ml-md-auto mr-md-5" >
-			<a href="add_book.php" >Add a Book</a>
+			<a href="add_book.php">Add a Book</a>
 		</div>		
 	</header>
 
@@ -39,7 +39,6 @@
 				} 
   		}else{$a="Order by id desc"; 
 		}
-  		//
 		 $limit =6;
 		if(isset($_GET['page'])){
 			$page = $_GET['page'];
@@ -57,7 +56,7 @@
 			$result=mysqli_query($conn,$sql); 
 		
 		} else{
-			$sql="SELECT * FROM books {$a} LIMIT {$offset} ,{$limit}  ";
+			$sql="SELECT * FROM books {$a} LIMIT {$offset} ,{$limit} ";
 			$result=mysqli_query($conn,$sql); 
 		}
 	?>
