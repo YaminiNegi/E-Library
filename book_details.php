@@ -2,10 +2,6 @@
 <?php
 include('connect.php');
 
-
-	
-
-
  if(isset($_GET['id'])){
  	$id=mysqli_real_escape_string($conn,$_GET['id']);
  	$sql="SELECT * FROM books WHERE id=$id";
@@ -13,8 +9,6 @@ include('connect.php');
  	$result = mysqli_query($conn,$sql);
  	$book = mysqli_fetch_assoc($result);
  	mysqli_free_result($result);
- 	// mysqli_close($conn);
-
  	}
 ?>
 
@@ -46,16 +40,16 @@ include('connect.php');
 		<h4><?php echo htmlspecialchars($book['title'])?></h4>
 		<img src="<?php echo $book['image_url'] ? $book['image_url']  : 'https://assets.entrepreneur.com/content/3x2/2000/20191219170611-GettyImages-1152794789.jpeg' ;?>" height="160" width="140" >
 		<p>Author- <?php echo htmlspecialchars($book['author'])?></p>
-		<p class="text-center" style="white-space: pre-wrap;">Description- <?php echo htmlspecialchars($book['description'])?></p>
+		<p class="text-truncate text-center" style="white-space: pre-wrap;">Description- <?php echo htmlspecialchars($book['description'])?></p>
 		
   	<?php else: ?>
   		<h5>No Book with this id</h5>
   	 <?php endif; ?>
  </div> 	 	
   	<div class="d-flex flex-row align-items-center justify-content-center px-4 container col-md-6">
-		<form class= "mx-2" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>"  method="POST">
-			<input type="hidden" name="id_to_delete" value="<?php echo $book['id']?>">	
-			<button type="button" name="delete" class="btn btn-danger" >Delete</button>
+		<form class= "mx-2 delete_book" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>"  method="POST">
+			<input id="delete_book_id" type="hidden" name="id_to_delete" value="<?php echo $book['id']?>">	
+			<button type="submit" name="delete" class="btn btn-danger" >Delete</button>
 		</form>	
 		<form >
 			<a href="edit.php?id=<?php echo $book['id']?>" class="btn btn-primary">Edit</a>
@@ -65,4 +59,27 @@ include('connect.php');
 
 </body>
 
+
 </html>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+
+    <script src="deleteform.js" ></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<?php
+if (!empty($_POST['id'])) {
+	$data=[];
+	$id_to_delete=mysqli_real_escape_string($conn,$_POST['id']);	
+	$sql = " DELETE FROM books WHERE id = $id_to_delete";	
+	if(mysqli_query($conn, $sql)){
+		    $data['success'] = true;
+
+		return json_encode($data);
+
+	}
+}	
+
+
+?>
+
