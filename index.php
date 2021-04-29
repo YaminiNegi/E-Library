@@ -112,10 +112,10 @@
 				if($queryResult > 0){
 					while($book = mysqli_fetch_assoc($result)) { ?>
 							<div class="single-book-container col-12 col-md-4 col-xl-3 mx-auto mx-md-3 mx-xl-5 mb-5 d-flex flex-column align-items-center">
-				                <img src="<?php echo $book['image_url'];?>" height="160" width="140">
+				                <img src="<?php echo $book['image_url'] ? $book['image_url']  : 'https://assets.entrepreneur.com/content/3x2/2000/20191219170611-GettyImages-1152794789.jpeg' ;?>" height="160" width="140">
 				                <p><strong> <?php echo $book['title'];?></strong></p>
 				                <div class="text-truncate text-center d-block w-100"><i><strong><?php echo $book['author'];?></strong></i></div>
-				                <div class="text-truncate d-block w-100" style="height: 30px;"><i><?php echo $book['description'];?></i></div>
+				                <div class="text-truncate text-center d-block w-100" style="height: 30px;white-space: pre-wrap;"><i><?php echo $book['description'];?></i></div>
 				                <div><a href="book_details.php?id=<?php echo $book['id']?>">More Info</a></div>    
 						</div>
 					<?php }

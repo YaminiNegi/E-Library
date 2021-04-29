@@ -4,7 +4,6 @@
 	<head>
 			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		<title></title>
  		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="stylesheet" type="text/css" href="<link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
@@ -19,7 +18,7 @@
 	</header>
 
 
-	<?php include 'connect3.php'; ?>    
+	<?php include 'update.php'; ?>    
 	<div class="form-container d-flex mt-5 ml-2 d-flex flex-column flex-md-row align-items-center justify-content-center px-md-5"> 
 	    <?php
 		$stu_id = $_GET['id'];
@@ -30,7 +29,7 @@
 		if(mysqli_num_rows($result)> 0) { 
 			?> 
 
-			<form class="add-book" action="connect3.php" method="POST">
+			<form class="add-book" action="update.php" method="POST">
 						<div class="form-group d-flex flex-column mb-3">
 						<label>Book Name</label>
 						<input type="text" name="title" value="<?php echo $book['title'];?>" id="title" required="required">
@@ -43,7 +42,7 @@
 
 						<div class="form-group d-flex flex-column mb-3">
 						<label>Description</label>
-						<input type="text" name="description" value="<?php echo $book['description'];?>" id="description">
+						<textarea name="description"  id="description" ><?php echo $book['description'];?></textarea>
 						</div>
 					
 						<div class="form-group d-flex flex-column mb-3">
@@ -53,7 +52,7 @@
 
 						 <input type="hidden" name="id" value="<?php echo $book['id'];?>">
 						
-						<div class="d-flex justify-content-center ">
+						<div class="d-flex justify-content-center">
 							<button type="submit" class="btn btn-primary ">Update</button>	
 						</div>	
 			</form>
